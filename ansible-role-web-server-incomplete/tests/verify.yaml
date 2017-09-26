@@ -1,0 +1,9 @@
+- hosts: localhost
+  connection: local
+
+  tasks:
+      - wait_for:
+          host: instance
+          port: 80
+          timeout: 5
+          connect_timeout: 5

@@ -1,0 +1,12 @@
+version: '2.1'
+
+services:
+  instance:
+    image: chrismeyers/centos7
+    privileged: true
+
+  ansible-tester:
+    image: fllaca/ansible-tester
+
+    volumes:
+      - ../../ansible-role-web-server-incomplete:/ansible-role-web-server

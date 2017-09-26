@@ -11,7 +11,7 @@ endef
 
 .PHONY: setup
 setup:
-	docker-compose -f tests/docker-compose.yaml up -d 
+	docker-compose -f tests/docker-compose.yaml up -d
 
 .PHONY: converge
 converge:
@@ -22,7 +22,7 @@ verify:
 	$(call run_playbook,verify)
 
 .PHONY: test
-test: setup converge verify 
+test: setup converge verify
 
 .PHONY: clean
 clean:
